@@ -114,11 +114,6 @@ int px4_simple_app_main(int argc, char *argv[])
 				att.q[1] = accel.xyz[1];
 				att.q[2] = accel.xyz[2];
 
-				PX4_INFO("Angles:\t%8.4f\t%8.4f",
-					 //(double)accel.xyz[0], крен
-					 //(double)accel.xyz[1]); тангаж
-
-
 				orb_publish(ORB_ID(vehicle_attitude), att_pub, &att);
 			}
 
